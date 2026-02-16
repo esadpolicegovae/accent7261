@@ -1,0 +1,384 @@
+@font-face {
+    font-family: 'adpfont';
+    src: url("../fonts/adpfont.woff2") format("woff2"),url("../fonts/adpfont.woff") format("woff"),url("../fonts/adpfont.ttf") format("truetype");
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+    transition: 0.3s all ease;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman", Times, serif;
+    background: linear-gradient(#f1f1f1, #ccc);
+    color: #333;
+    line-height: normal;
+    font-size: 13px;
+    border-top: 3px solid #c11627;
+
+}
+
+    body #print-node {
+        width: 980px;
+        margin: 55px auto;
+    }
+
+    body .certificate-tbl {
+        border: 0px solid #ccc;
+        padding: 25px 25px 50px;
+        width: 980px;
+        margin: 0 auto;
+        box-shadow: 0 6px 50px -20px rgba(0,0,0,0.8);
+        border-radius: 4px;
+        overflow: hidden;
+        background-color: #fff;
+        position: relative;
+    }
+
+        body .certificate-tbl header {
+            border-bottom: 0px solid #999;
+            overflow: hidden;
+            font-size: 19px;
+            text-align: center;
+            margin-bottom: 10px;
+            height: 110px;
+            margin-top: 10px;
+        }
+
+            body .certificate-tbl header span {
+                font-size: 14px;
+                display: block;
+                padding-top: 5px;
+            }
+
+            body .certificate-tbl header .name {
+                float: left;
+                width: 37%;
+                padding-top: 14px;
+                font-weight: bold;
+            }
+
+                body .certificate-tbl header .name.ar {
+                    float: right;
+                    font-size: 20px;
+                    font-weight: bold;
+                    direction: rtl;
+                    text-align: center;
+                    padding-top: 7px;
+                }
+
+                    body .certificate-tbl header .name.ar span {
+                        font-size: 14px;
+                        display: block;
+                    }
+
+                body .certificate-tbl header .name.logo {
+                    height: 85px;
+                    width: 85px;
+                    overflow: hidden;
+                    float: none !important;
+                    display: inline-block;
+                    padding-top: 0px;
+                }
+
+                    body .certificate-tbl header .name.logo img {
+                        width: 100%;
+                    }
+
+    body .content-tbl {
+        display: block;
+        overflow: hidden;
+        margin: 5px 0;
+    }
+
+        body .content-tbl.center {
+            text-align: center;
+        }
+
+        body .content-tbl .barcode-tbl {
+            display: inline-block;
+            overflow: hidden;
+            text-align: center;
+            margin: 0;
+        }
+
+            body .content-tbl .barcode-tbl img {
+                width: 220px;
+                display: inline-block;
+                height: 50px;
+                margin-top: 5px;
+            }
+
+        body .content-tbl .title {
+            font-family: serif;
+            display: inline-block;
+            overflow: hidden;
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 5px;
+            line-height: 24px;
+            float: right;
+            margin-right: 90px;
+        }
+
+            body .content-tbl .title .ar {
+                display: block;
+                text-align: center;
+            }
+
+    body .short-dec {
+        width: 100%;
+    }
+
+        body .short-dec td {
+            border: 0;
+            padding: 0px 8px;
+        }
+
+            body .short-dec td:first-child {
+                padding-left: 0;
+            }
+
+            body .short-dec td:last-child {
+                padding-right: 0;
+            }
+
+            body .short-dec td td {
+                padding: 5px;
+                border: 1px solid #999;
+            }
+
+    body table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        body table td {
+            padding: 0;
+            border: 0;
+        }
+
+            body table td td {
+                padding: 4px 15px;
+                border: 1px solid #999;
+                text-align: center;
+                font-weight: bold;
+            }
+
+    body .lbl {
+        background-color: #e7e7e7 !important;
+        width: 160px;
+    }
+
+    body .department-name {
+        float: left;
+        width: 45%;
+        margin: 10px 0 0;
+        text-align: left;
+        font-weight: bold;
+        line-height: 16px;
+    }
+
+        body .department-name.ar {
+            text-align: right;
+            float: right;
+            font-size: 1.2em;
+        }
+
+    body .section-title {
+        font-weight: bold;
+        font-size: 17px;
+        color: #222;
+        float: left;
+        width: 100%;
+        margin-bottom: 6px;
+        margin-top: 6px;
+    }
+
+        body .section-title .en {
+            float: left;
+            white-space: nowrap;
+            text-align: left;
+            text-decoration: underline;
+        }
+
+        body .section-title .ar {
+            white-space: nowrap;
+            float: right;
+            text-align: right;
+            font-weight: bold;
+            font-size: 18px;
+            text-decoration: underline;
+        }
+
+    body strong {
+        font-weight: bold;
+    }
+
+    body .signature-tbl {
+        float: left;
+        width: 100%;
+    }
+
+        body .signature-tbl .sign {
+            padding-top: 0px;
+            top: -20px;
+            padding-bottom: 20px;
+            position: relative;
+        }
+
+            body .signature-tbl .sign span {
+                display: block;
+                line-height: 20px;
+                padding-top: 0px;
+                font-weight: bold;
+            }
+
+            body .signature-tbl .sign img {
+                max-width: 210px;
+                margin-right: 0px;
+                height: 52px;
+                margin-bottom: 10px;
+            }
+
+        body .signature-tbl img {
+            border-radius: 2px;
+            margin: 0 2px 0 0;
+        }
+
+        body .signature-tbl a {
+            font-weight: bold;
+            color: #c11627;
+            margin-top: 5px;
+            display: block;
+            padding-left: 100px;
+            text-decoration: underline;
+        }
+
+        body .signature-tbl .ar img {
+            float: right;
+            margin: 0 0px 0 3px;
+            position: relative;
+            top: 2px;
+        }
+
+    body footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        color: #222;
+        text-align: center;
+        font-size: 12px;
+        padding: 8px;
+        direction: rtl;
+        border-top: 1px solid #999;
+    }
+
+        body footer a {
+            color: #222;
+        }
+
+        body footer .sep {
+            margin: 0 15px;
+        }
+
+    body .print-btn {
+        position: fixed;
+        top: 40px;
+        right: 40px;
+        background: #c11627;
+        color: #fff;
+        padding: 10px 15px;
+        font-size: 14px;
+        margin: auto;
+        background-image: url(../images/print-icon.svg);
+        background-size: 27px;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 100px;
+        border: 0px solid;
+        box-shadow: 0 0 10px rgba(0,0,0,0.4);
+        transition: 0.2s ease all;
+        cursor: pointer;
+    }
+
+        body .print-btn:hover {
+            transform: scale(1.2);
+        }
+
+    body .ar {
+        text-align: right;
+    }
+
+    body .pushleft {
+        margin: 0 !important;
+    }
+
+@media print {
+    body {
+        width: 100%;
+        height: 29.7cm;
+        margin: 0mm;
+        background: #fff !important;
+        border-top: 0px solid #c11627 !important;
+        color: #000 !important;
+    }
+
+        body * {
+            color: #000 !important;
+        }
+
+        body .section-title {
+            color: #222 !important;
+        }
+
+            body .section-title * {
+                color: #222 !important;
+            }
+
+        body #print-node {
+            margin: 0 auto !important;
+        }
+
+        body .certificate-tbl {
+            border: 0px solid #ccc;
+            box-shadow: none;
+            border-radius: 0px;
+            padding: 0px 25px 40px !important;
+        }
+
+        body footer {
+            background: #fff;
+            border-top: 1px solid #000 !important;
+            padding: 15px;
+            margin: 0 25px 0px !important;
+        }
+
+        body .certificate-tbl header .name.ar span {
+            font-size: 14px;
+            padding-top: 1px;
+        }
+}
+
+@page {
+    size: auto;
+    margin: 15px;
+}
